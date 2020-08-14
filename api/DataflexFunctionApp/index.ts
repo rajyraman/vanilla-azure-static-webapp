@@ -25,28 +25,17 @@ const httpTrigger: AzureFunction = async function (
 
     const config = new WebApiConfig("9.1", tokenResponse.token, clientUrl);
 
-    if (!context.bindingData.entityName) {
-      const whoAmIResponse = await unboundFunction(config, "WhoAmI");
-      context.res = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        // status: 200, /* Defaults to 200 */
-        body: JSON.stringify(whoAmIResponse),
-      };
-    } else {
-      const records = await retrieveMultiple(
-        config,
-        context.bindingData.entityName,
-        `$select=${context.bindingData.attributes}`
-      );
-      context.res = {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(records),
-      };
-    }
+    const records = await retrieveMultiple(
+      config,
+      context.bindingData.entityName,
+      `$select=${context.bindingData.attributes}`
+    );
+    context.res = {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(records),
+    };
   } catch (e) {
     context.res = {
       headers: {
