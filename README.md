@@ -1,0 +1,2 @@
+# vanilla-azure-static-webapp
+ 

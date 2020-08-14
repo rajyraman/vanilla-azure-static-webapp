@@ -1,0 +1,47 @@
+{
+  "routes": [
+    {
+      "route": "/welcome",
+      "allowedRoles": [
+        "cdsreader"
+      ]
+    },
+    {
+      "route": "/api",
+      "allowedRoles": [
+        "cdsreader"
+      ]
+    },
+    {
+      "route": "/entitylist",
+      "allowedRoles": [
+        "cdsreader"
+      ]
+    },
+    {
+      "route": "/entity/*",
+      "serve": "/welcome.html",
+      "allowedRoles": [
+        "cdsreader"
+      ]
+    },
+    {
+      "route": "/login",
+      "serve": "/.auth/login/aad"
+    }
+  ],
+  "platformErrorOverrides": [
+    {
+      "errorType": "NotFound",
+      "serve": "/404.html"
+    },
+    {
+      "errorType": "Unauthenticated",
+      "statusCode": "302",
+      "serve": "/index.html"
+    }
+  ],
+  "mimeTypes": {
+    "custom": "text/html"
+  }
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Azure Static Web App</title>
+</head>
+
+<body>
+  <p class="title">Azure SWA</p>
+  <div class="jsonContainer">
+    <div>
+      <h2>Function JSON</h2>
+      <div id="functionJSON">
+        <img src="../../loader.svg" alt="Microsoft loading animation.." width="400px" />
+      </div>
+    </div>
+    <div>
+      <h2>SWA CDS Request JSON</h2>
+      <div id="clientJSON">
+        <img src="../../loader.svg" alt="Microsoft loading animation.." width="400px" />
+      </div>
+    </div>
+  </div>
+</body>
+<script src="https://unpkg.com/vue@2.6.11/dist/vue.min.js"></script>
+<script src="https://unpkg.com/vue-json-tree@0.4.3/dist/json-tree.js"></script>
+<script src="https://alcdn.msauth.net/browser/2.0.1/js/msal-browser.js"
+  integrity="sha384-knPh00kvaT+k3+4TCD5S2ORDNVc2I3RVbqI/ksbTlpdSBh8ZnyAPxW2kkTSG0+mT" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="../../styles.css" />
+<script src="../../script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", (e) => {
+    sendCDSRequest();
+    sendFunctionRequest();
+  });
+</script>
+
+</html>

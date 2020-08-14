@@ -1,0 +1,89 @@
+.title {
+  background: #742774;
+  display: grid;
+  place-items: center;
+  font-family: "Open Sans";
+  font-size: x-large;
+  grid-template: 1fr;
+  height: 10vh;
+  color: #fff;
+  box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
+    0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  font-family: "Open Sans";
+  font-size: larger;
+  height: 200px;
+  box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
+    0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+  padding: 50px;
+  grid-gap: 1rem;
+}
+
+.supercentre {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+}
+
+img.powerappsimage {
+  width: 200px;
+  height: 100px;
+  object-fit: contain;
+}
+
+#login {
+  background-color: #0066ff;
+  color: #fff;
+  border-radius: 6px;
+  border: 1px solid #0066fe;
+  padding: 1ch;
+  width: 100px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#app {
+  display: grid;
+  align-self: center;
+  place-content: center;
+  align-content: center;
+  height: 80vh;
+}
+
+.links {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.links > div {
+  background-color: #0078d4;
+  padding: 0.5rem;
+  box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
+    0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+  border-radius: 0.2cm;
+  text-align: center;
+}
+
+.links > div > a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.jsonContainer {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  text-align: center;
+  padding: 1ch;
+}
+
+.jsonContainer > div {
+  box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
+  0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+}
